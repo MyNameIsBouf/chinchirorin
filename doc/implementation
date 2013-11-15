@@ -1,0 +1,46 @@
+Our mechanics make several axiomatic assumptions:
+
+	* There are 5 players on the table, including the player (player 1)
+	* The AI of the 4 non-human players is the same each game
+		* Player 2, like Blinky in Pac-Man, is the most direct and aggressive player. He will bet high and press his luck often, rerolling if he doesn't like the point he set. Like Cruise McElroy in Pac-Man, if his stack starts to dwindle he will become even more aggressive, but he will play conservatively with his rerolls, accepting decent point levels.
+		* Player 3, like Pinky in Pac-Man, is both indirect and aggressive. He will place his bets conservatively and accept low rolls until the current point level is low, at which point he will bet strongly.
+		* Player 4, like Inky in Pac-Man, is an unpredictable wildcard. He will place strong or weak bets seemingly at random and will accept low rolls but sometimes reroll if he feels lucky. There is no strategy that can deal with Player 4 because Player 4 does not have a strategy.
+		* Player 5, like Clyde in Pac-Man, is an unenthusiastic participant. He will bet extremely conservatively and accept low rolls. If he is banker he will place slightly larger bets than usual. He will not act any differently.
+
+	* The game is divided into rounds, which are further divided into phases.
+		* A round is composed of two phases.
+			* Betting Phase, where the banker places a bet and players must match or raise the bet. Players are not obligated to match any bet but that of the banker.
+			* Rolling Phase, where the players take turns rolling their dice.
+	* Player 2 will always start as the banker.
+	* The players sit in their numeral order clockwise from 1. So player 3 takes his turn after player 2, but before player 4, etc. Player 5 will play before player 1 unless player 1 went first. It goes in a circle.
+
+
+We need to track several values for the duration of the whole game:
+
+	* Who is currently the banker
+	* The current amount of money in each player's stack
+	* Who is currently in the game (explicitly separate from the amount of money so players don't get dropped for going all-in)
+	* Bets on the table that have been carried over from the last round.
+	* How many rounds have already been played
+
+Then we need to track these values for the duration of a whole round:
+
+	* What bets are on the table and who they belong to (bets carried over from the last round are put into the 'neutral bets' global value)
+	* The bet made by the banker (yeah yeah, bad practice, bite me)
+	* The highest point currently played
+	* The point set by each player
+	* Which player is currently rolling
+	* How many more rerolls the player may make (-1 for banker)
+
+We need a function for each of these events:
+
+	* Player rolls the dice
+	* Player instantly wins from a dice roll
+		* Include case of snake eyes - doubling of bets
+	* Player instantly loses from a dice roll
+	* Player(s) win from beating the point
+	* PC asked if they want to re-roll
+	* NPC deciding whether to re-roll or not
+	* PC asked how much they want to bet
+	* NPC deciding how much they want to bet
+	* Player goes bust

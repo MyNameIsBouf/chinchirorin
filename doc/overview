@@ -1,0 +1,74 @@
+Background:
+
+Chinchirorin is a Japanese variety of an old Chinese dice game. It is usually played with a group of three or more players.
+Most people play with house rules and there is no one way to play chinchirorin.
+
+Terminology:
+
+	* Push - receive exactly the amount of money you bet
+	* Split - divide the pot evenly between all splitting players
+	* Pot - sum of all bets on the table including neutral bet
+	* Point - the number which your kicker must beat to win. The doubles number settles most ties.
+	* Kicker - the third die in a doubles roll. Y in X-X-Y.
+	* Pisser - an instant loss bet - 1-2-3 or X-X-1
+	* Killer - an instant win bet - 4-5-6, X-X-X, or X-X-6 (latter by banker only)
+	* Blueball - a meaningless roll (e.g. X-Y-Z and not 1-2-3 or 4-5-6)
+	* Instantly Wins - The player scores an unchallengeable victory. He takes the pot immediately and the round ends.
+	* Instantly Loses - The player scores an unchallengeable defeat. He cannot reroll.
+	* Instant Kill Rule - standard ruling that the banker who rolls triples cannot be beaten by any players. If this rule is disabled, players 
+	* 4-5-6 Dice - A set of three cheat dice which only have the numbers 4, 5 and 6 printed on them (so worst possible roll is 5-5-4)
+	* Snake Eyes - The roll 1-1-1. For the banker rolling snake eyes doubles everyone's bets. For everyone else it trumps all other triples.
+	* Neutral bet - The bet held over from the last round when the banker rolls a pisser
+	* Stack - the money a player holds in reserve for future betting
+	* Bust - player loses with no money in their stack
+	* Player - any player at the table
+	* PC - the human player
+	* NPC - the non-human players
+
+What are the rules:
+
+Play is established with one player at the table being granted the status of 'bank' for two rounds
+
+Start with the banker:
+	* Banker rolls 3 dice
+	* Did you roll 1-2-3?
+		* BANK LOSES
+	* Did you roll 4-5-6?
+		* Bank instantly wins!
+	* Did you roll triples?
+		* Triple 1s?
+			* Bank wins 2x the pot
+		* Bank wins!
+	* Did you roll doubles
+		* Is your kicker a 6?
+			* Bank instantly wins!
+		* Is your kicker a 1?
+			* BANK LOSES
+		* Otherwise, your kicker is the point. Players following bank must roll to beat this point or else lose.
+	* Did you not roll any of the above?
+		* Re-roll until you do.
+Did the banker win?
+	* If so, he takes all of the money on the table. If he got snake eyes everyone who put down a bet has to put double their bet on the table first. If this busts them, they lose.
+	* If he immediately lost, he immediately passes bank to the next player in the sequence. (It goes clockwise) Non-bankers push; the banker puts his bet in the middle of the table. (carried-over bet) A new round begins.
+	* If he set a point (doubles + a number that isn't 6 or 1) - that point is set as the target to beat.
+		* Now we go around the table.
+Is game still in play?
+	* We rotate clockwise around the table, each player making a maximum of three rolls.
+	* It's the player's choice if he wants to reroll unless he instantly wins/loses with his roll.
+	* It follows the format:
+		* Player rolls 3 dice
+			* Did he roll 1-2-3?
+				* He instantly loses
+			* Did he roll 4-5-6?
+				* He instantly wins!
+			* Did he roll triples?
+				* He is considered to have beaten the point, but doesn't instantly win. He can be beaten or matched by equal triples or higher, but nobody rolling doubles will win.
+				* Triples winning tiers: 1 > 6 > 5 > 4 > 3 > 2
+			* Did he roll doubles?
+				* His kicker is the point. If he beats the point, he has won, and can be beaten or matched by equal point or higher.
+				* The doubles are the tiebreaker.
+					* If the point is 3, player 2 rolls 4-4-5 and player 3 rolls 6-6-5, player 3 beats player 2.
+					* If player 2 and 3 both roll 4-4-5 they split the pot.
+			* If he doesn't roll any of the above, he instantly loses. Therefore, he needs to exercise his free rerolls with caution.
+Is game still in play?
+	* We settle the pot. If this is the banker's second round, control of the bank passes clockwise to the next player.
